@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/icon/site.webmanifest">
+    <!-- END ICON -->
+    <title> 📐SSE-UnitConvertPro </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-tabs">
+            <div class="company-info">
+                <img src="./assets/logo/logo.png"  alt="Company Logo" class="company-logo text1">
+                <div class="company-name text1">The SSE GO-TO Group (SSE-UnitConvertPro)</div>
+            </div>
+            <a href="" class="text1 sm-h">Team</a>
+            <a href="" class="text1 sm-h">Documentation</a>
+            <a href="" class="text1 sm-h">Contact</a>
+            
+            <div id="menu">
+                <button id="menu-btn">
+                <span></span>
+                <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <hr>
+    <section class="int-bang">
+        <div class="sh-bang"> 
+            <h1>SSE-X <br>UNIT CONVERTER</h1>
+            <p>The number 1 goto for anything</p>
+            <b>Length/Distance & Temperature Conversion</b> 
+        </div>
+        <div class="desc">
+            <i class="smaller"><span>Instructions</span></i> <br>
+            <span class="smaller">
+                First Select a conversion method. <br>
+                Then enter a quantity and select a unit to convert from, <br>
+                Then also select the unit to convert to. <br>
+            </span>
+        </div>
+    </section>
+    <hr>
+
+    <div class="converter-wrapper">
+
+    <form name="property_form">
+        <span>
+        <select class="select-property" name="the_menu" size=1 onChange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)">
+        </select>
+        </span>
+    </form>
+
+    <div class="converter-side-a">
+        <form name="form_A" onSubmit="return false">
+        <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0" onKeyUp="CalculateUnit(document.form_A, document.form_B)">
+        <span>
+            <select name="unit_menu" onChange="CalculateUnit(document.form_B, document.form_A)">
+            </select>
+        </span>
+        </form>
+    </div> <!-- /converter-side-a -->
+
+    <div class="converter-equals">
+    <p>=</p>
+    </div> <!-- /converter-side-a -->
+
+    <div class="converter-side-b">
+        <form name="form_B" onSubmit="return false">
+        <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0" onkeyup="CalculateUnit(document.form_B, document.form_A)">
+        <span>
+            <select name="unit_menu" onChange="CalculateUnit(document.form_A, document.form_B)">
+            </select>
+        </span>
+        </form>
+    </div> <!-- /converter-side-b -->
+    </div><!-- /converter-wrapper -->
+
+
+    <!-- 
+        <img class="sse-svg" src="./assets/noname/your_svg_file.svg" alt="SVG Image" width="100%" height="100%">
+
+     -->
+    
+
+    <footer>
+        <div class="foot-a">
+            <a href="">Privacy</a>
+            <a href="">Terms</a>
+            <a href="">Contact</a>
+        </div>
+        <div class="foot-b">
+            <p>&copy; 📐SSE-UnitConverter Pro TEAM</p>
+        </div>
+    </footer>
+
+
+    <!-- FIREBASE HOSTING STUFF //DON'T HAVE TO READ -->
+    <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyCnWFs84P2N3P6nlUk0pAM07OvTSV1rl1g",
+        authDomain: "sse-unitconvertpro.firebaseapp.com",
+        projectId: "sse-unitconvertpro",
+        storageBucket: "sse-unitconvertpro.appspot.com",
+        messagingSenderId: "43006696593",
+        appId: "1:43006696593:web:78acf0131df6a1c026f330",
+        measurementId: "G-N7KBCQKNCM"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    </script>
+    <!-- END FIREBASE HOSTING STUFF //DON'T HAVE TO READ -->
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
