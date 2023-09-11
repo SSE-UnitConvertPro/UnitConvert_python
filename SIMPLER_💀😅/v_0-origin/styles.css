@@ -1,0 +1,244 @@
+:root {
+    --main-text1: white;
+    --main-primary: #5095f7;
+    --main-seconday: #1a1d16;
+    --main-background: #1f2c3f;
+    --main-accent: #80b2f9;
+  }
+  
+  
+  *{
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #202020;
+    background: var(--main-seconday);
+    font-family: 'Open Sans', sans-serif;
+    color: #E5E5E5;
+  }
+  
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+  .a {
+    color: var(--main-accent);
+  }
+  
+  .converter-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .converter-wrapper input {
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    height: 40px;
+    box-sizing: border-box;
+  }
+  
+  .converter-wrapper span {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  
+  .converter-wrapper span select {
+    background-color: #263648;
+    color: #fff;
+    font-size: inherit;
+    padding: 10px;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+  
+  .converter-wrapper span::before,
+  .converter-wrapper span::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .converter-wrapper span::after {
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.5em;
+    top: 50%;
+    margin-top: -.5em;
+    color: #131B24;
+  }
+  
+  .converter-wrapper span::before {
+    width: 2.5em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    background-color: #202E3C;
+  }
+  
+  .converter-side {
+    display: inline-block;
+    width: 30%;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding: 0 10px;
+  }
+  
+  .converter-equals {
+    display: inline-block;
+    width: 10%;
+    font-size: 2.4em;
+    line-height: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /*FOR NAVIGATION */
+  .nav-tabs {
+    display: flex;
+    justify-content: space-around;
+    
+    padding: 10px 0;
+  }
+  
+  .company-name , .company-logo {
+    color: linen;
+  }
+  
+  .nav-tabs a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: ghostwhite;
+  }
+  
+  .nav-tabs a:hover {
+    background-color: #202020;
+    color: red;
+    transform: scale(1.2);
+  }
+  .foot-b {
+    color: white;
+  }
+  /*FOR NAVIGATION */
+  
+  h5 {
+    color: red;
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  
+  
+  /*FOR FOOTER*/
+  footer {
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+    
+    height: 100%;
+  }
+  
+  .foot-a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .foot-a a {
+    text-decoration: none;
+    color: linen;
+  }
+  .foot-a a:hover {
+    color: red;
+    transform: scale(1.4);
+  }
+  .foot-b {
+    display: flex;
+    justify-content: center;
+  }
+  /*END FOOTER*/
+  
+  nav, footer {
+    background: var(--main-background) !important;
+  }
+  
+  
+  
+  /*FOR SMALL DEVICES*/ 
+  #menu {
+    display: none;
+  }
+  #menu-btn{
+    width: 50px;
+    height: 30px;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #menu-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+  }
+  
+  #menu-btn span, #menu-btn::after {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    transition: width 300ms, background-color 300ms, transform 300ms;
+  }
+  
+  #menu-btn:hover span {
+    width: 70%;
+  }
+  #menu-btn:hover::after {
+    width: 20%;
+  }
+  
+  #menu-btn.active::after {
+    width: 0;
+  } 
+  #menu-bnt.active span {
+    background-color: red;
+  }
+  
+  #menu-btn.active span:nth-child(1) {
+    width: 70%;
+    transform: rotate(30deg) translateY(12px) translateX(4px); 
+  }
+  #menu-btn.active span:nth-child(2) {
+    width: 70%;
+    transform: rotate(-30deg) translateY(-12px) translateX(4px); 
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .sm-h {
+      display: none;
+    }
+    #menu {
+      display: flex;
+     }
+    
+  }
+  /*END FOR SMALL DEVICES*/
+  
